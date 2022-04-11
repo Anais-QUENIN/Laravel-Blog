@@ -9,8 +9,8 @@ Accueil : Nous arrivons sur la vue welcome.blade.php, contrôlée par le contrô
 
 Routes : Toutes les routes pour les URL sont indiquées dans le fichier web.php. A part lorsque l'on doit aller à un endroit précis, après une action nous nous redirigeons sur la page d'accueil : http://localhost:8000
 
-Séries : Ensuite dans le menu nous avons l'élément du menu Séries : Il faut cliquer dessus pour aller à l'URL http://localhost:8000/series : Nous arrivons alors sur la vue series.blade.php, contrôlée par le contrôleur SeriesController et liée au modèle Série. Cette vue affiche à l'utilisateur toutes les séries crées par l'administrateur.
-L'utilisateur (vous) peut cliquer sur le nom de la série : ce qui amènera directement à la vue single.blade.php correspondant à l'URL http://localhost:8000/series/{{$serie->id}}. Il y a aussi une barre de recherche avec un bouton Chercher : J'ai eu des difficultés à la faire fonctionner, elle ne marche normalement pas...
+Séries : Ensuite dans le menu nous avons l'élément du menu Séries : Il faut cliquer dessus pour aller à l'URL http://localhost:8000/series : Nous arrivons alors sur la vue series.blade.php, contrôlée par le contrôleur SeriesController et liée au modèle Série. Cette vue affiche à l'utilisateur toutes les séries crées par l'administrateur. Il y a aussi une barre de recherche ou l'utilisateur peut chercher la série qu'il veut en remplissant le champ et en cliquant sur le bouton "Chercher".
+L'utilisateur (vous) peut cliquer sur le nom de la série : ce qui amènera directement à la vue single.blade.php correspondant à l'URL http://localhost:8000/series/{{$serie->id}}.
 
 Vue de l'utilisateur d'une série : Dans la vue single.blade.php, on voit le titre et l'auteur de la série, sa description, l'image de la série, la vidéo correspondant à la bande annonce de la série. L'utilisateur a aussi accès sur cette vue aux commentaires (Exercice supplémentaire 1), il peut laisser un commentaire en remplissant le formulaire avec son pseudo et le contenu de son commentaire, puis l'envoyer. Il a aussi accès aux anciens commentaires laissés. La gestion des commentaires se fait depuis le contrôleur CommentController et avec le modèle Comment.
 
@@ -22,5 +22,10 @@ Il peut modifier une série en cliquant sur le bouton "Modifier une série" : en
 Il peut aussi créer une nouvelle série, en appuyant sur le bouton "Créer une série" : en cliquant, l'administrateur tombe sur la vue createserie, qui lui montre un formulaire avec des champs qu'il doit remplir, dont choisir d'insérer une image et une vidéo (Exercice supplémentaire 7). La série sera donc créée dans la base de données. 
 Comme dit plus haut l'administrateur et aussi capable de supprimer une série en appuyant sur un des boutons "Supprimer une série". En cliquant, il se retrouve sur la vue admindelete.blade.php, à l'URL http://localhost:8000/delete/{{$series->id}}. Cette vue montre une page ou l'on nous demande si nous sommes sûrs de la suppression de la série, si nous sommes sûrs alors il faut appuyer sur le bouton "Supprimer la série" qui aura comme action de supprimer la série choisie dans la liste de séries de la page et de la base de données. Sinon, l'administrateur peut appuyer sur le bouton "Retour", qui le ramènera sur la vue adminseries.blade.php.
 
-Difficultés : users et aussi la barre de recherche déja dit dans le rendu
+Modèles : 4 modèles sont crées : Contact, Serie, Comment, User
+Factories: 3 factory ont été crées : UserFactory, CommentFactory, SerieFactory
+Seeder : Création d'un DatabaseSeeder
+Migrations : migrations des tables series, contacts, comments, users
+
+Difficultés : Lier le User et l'auteur de la série ou des commentaires, j'ai donc créé des champs auteur indépendants.
 
