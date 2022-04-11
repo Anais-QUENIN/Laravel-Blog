@@ -12,10 +12,15 @@ class SeriesController extends Controller {
          'series' => $series,
          
       
-      ));
-
-
+      ));  
+    }
+    
+    function recherche(Request $request) {
      
+      $search= request('saisie');
+      $series = \App\Models\Serie::where('title', 'LIKE', '%' . $search . '%')->get();
+      return view('series', array('series' => $series, ));
+
      
     }
 
