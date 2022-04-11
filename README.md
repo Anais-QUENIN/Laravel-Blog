@@ -34,5 +34,5 @@ Migrations : migrations des tables series, contacts, comments, users
 
 3 - Difficultés 
 
-J'ai eu de la difficulté à lier le User et l'auteur de la série ou des commentaires, j'ai donc créé des champs auteur indépendants. Le User n'a donc pas trop de poids dans le projet. J'ai aussi eu du mal à trouver la commande me permettant d'inporter le fichier .env sur Github, je l'ai donc importé à la main.
+J'ai eu de la difficulté à lier le User et l'auteur de la série ou des commentaires, j'ai donc créé des champs auteur indépendants. Le User n'a donc pas trop de poids dans le projet. J'ai aussi eu du mal à trouver la commande me permettant d'inporter le fichier .env sur Github, je l'ai donc importé à la main. Difficultés en ce qui concerne le guide d'installation...
 
