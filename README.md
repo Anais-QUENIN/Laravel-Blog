@@ -1,9 +1,9 @@
-// Le guide d'installation de votre projet (avec toutes les commandes à exécuter et les fichiers à configurer)
+1- Installation
 
-Il faut tout d'abord lancer la commande dans le terminal de Visual Studio Code : php artisan serve pour démarrer le serveur. Taper dans un navigateur l'URL http://localhost:8000
+Récupérer les dossiers et fichiers dans le repository du projet sur Github. Les ouvrir sur Visual Studio Code.
+Il faut tout d'abord lancer la commande dans le terminal de Visual Studio Code : php artisan serve pour démarrer le serveur. Taper dans un navigateur l'URL http://localhost:8000 . A partir de là, l'accès au site sera autorisé. 
 
-2- Création de vues, contrôleurs, modèles et routes
-
+2- Vues, contrôleurs, modèles et routes, explication de la navigation sur le site
 
 Accueil : Nous arrivons sur la vue welcome.blade.php, contrôlée par le contrôleur HomeController. Il s'agit de la page utilisateur de bienvenue, ou l'utilisateur peut voir un message de bienvenue ainsi que les 3 dernières séries ajoutées sur le site par l'administateur. 
 
@@ -27,5 +27,7 @@ Factories: 3 factory ont été crées : UserFactory, CommentFactory, SerieFactor
 Seeder : Création d'un DatabaseSeeder
 Migrations : migrations des tables series, contacts, comments, users
 
-Difficultés : Lier le User et l'auteur de la série ou des commentaires, j'ai donc créé des champs auteur indépendants.
+3 - Difficultés 
+
+J'ai eu de la difficulté à lier le User et l'auteur de la série ou des commentaires, j'ai donc créé des champs auteur indépendants. Le User n'a donc pas trop de poids dans le projet. J'ai aussi eu du mal à trouver la commande me permettant d'inporter le fichier .env sur Github, je l'ai donc importé à la main.
 
