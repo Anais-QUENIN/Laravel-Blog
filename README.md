@@ -1,3 +1,8 @@
+RAPPORT DE PROJET - APPLICATION WEB AVEC LARAVEL
+
+QUENIN Anaïs //pas de binôme car il n'est jamais venu
+
+
 1- Installation
 
 Récupérer les dossiers et fichiers dans le repository du projet sur Github. Les ouvrir sur Visual Studio Code.
