@@ -2,11 +2,26 @@
 
 @section('content')
 
-<form id="recherche" method="POST">
+<form id="recherche" method="POST" action= "/series" >
+@csrf
+<input name="saisie" type="text" placeholder="Rechercher série..." />
+
+<input class="button" type="submit" value="Chercher"/>
  
-<input name="saisie" type="text" placeholder="Rechercher série..." required />
+</form>
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 </br>
+
 
 <ul>
     @foreach ($series as $serie)
@@ -17,13 +32,7 @@
 @endforeach
 </ul>
 
-</br>
-
-<input class="button" type="submit" value="Chercher" />
- 
-</form>
 
 
-<!--<h1> Liste des séries :</h1> -->
 
 @endsection
